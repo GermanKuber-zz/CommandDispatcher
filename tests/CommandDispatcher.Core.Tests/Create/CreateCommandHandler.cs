@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using CommandDispatcher.Test.Infrastructure;
-using CommandDispatcher.Test.Infrastructure.Validators;
+using CommandDispatcher.Core;
 
 namespace CommandDispatcher.Test.Create
 {

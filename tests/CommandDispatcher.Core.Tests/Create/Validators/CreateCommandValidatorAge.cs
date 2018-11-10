@@ -1,4 +1,4 @@
-using CommandDispatcher.Test.Infrastructure.Validators;
+using CommandDispatcher.Core.Validators;
 
 namespace CommandDispatcher.Test.Create.Validators
 {

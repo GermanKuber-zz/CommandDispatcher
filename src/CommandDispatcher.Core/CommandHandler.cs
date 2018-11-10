@@ -20,7 +20,7 @@ namespace CommandDispatcher.Core
             var responseList = new List<ValidatorResponse>();
             foreach (var commandValidator in _validatorList)
             {
-                var response = commandValidator.ValidateHandler(command, _validationData);
+                var response = commandValidator.Validate(command, _validationData);
                 responseList.Add(response);
                 if (!response.Success)
                 {
@@ -29,7 +29,9 @@ namespace CommandDispatcher.Core
                         return ValidatorCommandResponse.Fail(responseList);
                 }
             }
+
             ExecuteHandler(command, _validationData);
+
             if (success)
                 return ValidatorCommandResponse.Ok(responseList);
             return ValidatorCommandResponse.Ok(responseList);

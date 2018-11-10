@@ -1,4 +1,4 @@
-using CommandDispatcher.Test.Infrastructure.Validators;
+using CommandDispatcher.Core;
 
 namespace CommandDispatcher.Test.Create
 {
@@ -6,10 +6,5 @@ namespace CommandDispatcher.Test.Create
     {
         public string Name { get; set; }
         public int Age { get; set; }
-
-        public CreateCommandData()
-        {
-            
-        }
     }
 }

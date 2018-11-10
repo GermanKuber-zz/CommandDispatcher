@@ -5,7 +5,7 @@ namespace CommandDispatcher.Test.Create
         public string Name { get; set; }
         public int Age { get; set; }
 
-        protected CreateCommand()
+        public CreateCommand()
         {
             
         }

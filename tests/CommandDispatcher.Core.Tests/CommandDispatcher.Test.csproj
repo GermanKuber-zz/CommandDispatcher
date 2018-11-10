@@ -23,4 +23,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CommandDispatcher.Core\CommandDispatcher.Core.csproj" />
+  </ItemGroup>
+
 </Project>
