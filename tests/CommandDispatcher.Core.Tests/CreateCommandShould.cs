@@ -36,25 +36,5 @@ namespace CommandDispatcher.Test
             response.Success.Should().Be(false);
             response.ValidatorResponses.Count.Should().Be(1);
         }
-
-
-        //[Fact]
-        //public void Injection()
-        //{
-        //    var builder = new ContainerBuilder();
-        //    builder.RegisterGeneric(typeof(CommandHandler<,>))
-        //        .As(typeof(CommandHandler<,>))
-        //        .InstancePerLifetimeScope();
-        //    builder.RegisterGeneric(typeof(CommandValidator<,>))
-        //        .As(typeof(ICommandBaseValidator<,>))
-        //        .InstancePerLifetimeScope();
-        //    var container = builder.Build();
-        //    using (var scope = container.BeginLifetimeScope())
-        //    {
-        //        var reader = scope.Resolve<ICommandBaseValidator<CreateCommand, CreateCommandData>>();
-        //    }
-        //}
-
-     
     }
 }

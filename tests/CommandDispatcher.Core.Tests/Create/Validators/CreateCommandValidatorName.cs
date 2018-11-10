@@ -13,5 +13,10 @@ namespace CommandDispatcher.Test.Create.Validators
             }
             return ValidatorResponse.Fail(nameof(command.Name),"Age Error");
         }
+
+        public CreateCommandValidatorName()
+        {
+            
+        }
     }
 }

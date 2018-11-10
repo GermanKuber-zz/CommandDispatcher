@@ -3,7 +3,7 @@ using CommandDispatcher.Core.Validators;
 
 namespace CommandDispatcher.Core
 {
-    public abstract class CommandHandler<TCommand, TValidationData> where TValidationData : IValidationData, new()
+    public abstract class CommandHandler<TCommand, TValidationData> : ICommandHandler<TCommand> where TValidationData : IValidationData, new()
     {
         private readonly TValidationData _validationData = new TValidationData();
         private readonly List<ICommandBaseValidator<TCommand, TValidationData>> _validatorList;
@@ -34,7 +34,7 @@ namespace CommandDispatcher.Core
 
             if (success)
                 return ValidatorCommandResponse.Ok(responseList);
-            return ValidatorCommandResponse.Ok(responseList);
+            return ValidatorCommandResponse.Fail(responseList);
         }
         protected abstract void ExecuteHandler(TCommand command, TValidationData validationData);
     }
