@@ -1,4 +1,4 @@
-namespace CommandDispatcher.Core.Validators
+namespace CommandDispatcher.Core
 {
     public interface IValidationData
     {

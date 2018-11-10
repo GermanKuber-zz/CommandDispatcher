@@ -4,7 +4,8 @@ namespace CommandDispatcher.Test.Infrastructure.Validators
 {
     public class ValidatorCommandResponse
     {
-        private readonly List<ValidatorResponse> _validatorResponses;
+        public IReadOnlyCollection<ValidatorResponse> ValidatorResponses => _validatorResponses.AsReadOnly();
+        private List<ValidatorResponse> _validatorResponses { get; }
         public bool Success { get; set; }
 
         public static ValidatorCommandResponse Ok(List<ValidatorResponse> validatorResponses) => new ValidatorCommandResponse(true, validatorResponses);
